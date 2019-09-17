@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <div id="demo" class="carousel" :style="{width:innerWidth+'px'}" @mouseenter="stop" @mouseleave="start">
+  <section class="row mx-0">
+    <div id="demo" class="carousel col-12 px-0" :style="{width:innerWidth+'px'}" @mouseenter="stop" @mouseleave="start">
       <!--1.轮播图片-->
     <div class="carousel-inner" :class="ulClass" :style="ulStyle">
       <div v-for="(img,i) of imgs" :key="i" class="carousel-item" :style="{width:innerWidth+'px'}">
@@ -34,7 +34,7 @@
 export default {
   data(){
     return {
-      innerWidth:window.innerWidth,
+      innerWidth:window.innerWidth-17,
       ulClass:{ hasTrans:true },
       i:0,
       imgs:[
@@ -182,9 +182,9 @@ export default {
   .carousel-control-prev{
     margin-left:-40px;
   }
-  .carousel-control-next{
+   .carousel-control-next{
     margin-right:-40px;
-  }
+  } 
   .next-icon{
     margin-right:23px;
   } 
@@ -194,6 +194,11 @@ export default {
   .carousel-indicators li{
     width:8px;height:8px;}
   }
+   .next-icon,.prev-icon{
+    color:#ff8a06;
+    font-size:1.5rem;
+    font-weight:bolder;
+  } 
   @media screen and (min-width:768px) and (max-width:991px){
      .carousel-control-prev,
   .carousel-control-next{
@@ -215,6 +220,11 @@ export default {
     width:8px;height:8px;}
     
   }
+   .next-icon,.prev-icon{
+    color:#ff8a06;
+    font-size:1.5rem;
+    font-weight:bolder;
+  } 
  @media screen and (max-width:767px){
     .carousel-control-prev,
   .carousel-control-next{
@@ -235,6 +245,11 @@ export default {
   .carousel-indicators li{
     width:4px;height:4px;}
      
+  .next-icon,.prev-icon{
+    color:#ff8a06;
+    font-size:0.5rem;
+    font-weight:bolder;
+  } 
  }
   .carousel-control-prev,
   .carousel-control-next{
@@ -245,11 +260,7 @@ export default {
     border-radius: 50%;
   }
   
-  .next-icon,.prev-icon{
-    color:#ff8a06;
-    font-size:1.5rem;
-    font-weight:bolder;
-  } 
+ 
   
  .carousel-control-prev:hover,
   .carousel-control-next:hover{

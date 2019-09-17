@@ -3,6 +3,8 @@
     <my-header></my-header>
     <carousel></carousel>
     <product-navbar></product-navbar>
+    <product></product>
+    <news></news>
   </div>
 </template>
 
@@ -11,11 +13,15 @@
 import MyHeader from '../components/MyHeader'
 import Carousel from '../components/Carousel'
 import ProductNavbar from '../components/ProductNavbar'
+import Product from '../components/Product'
+import News from '../components/News'
 export default {
   components: {
     MyHeader,
     Carousel,
     ProductNavbar,
+    Product,
+    News
   }
 }
 </script>

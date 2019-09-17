@@ -1,5 +1,5 @@
 <template>
-    <div class="product_navbar " >
+    <div class="product_navbar w-100 " >
         <div class="row mx-0 d-flex justify-content-center">
             <ul style="background: #ff8a06;" class="list-unstyled nav col-md-3 col-xs-12 px-0  text-md-center text-xs-left  align-items-center nav_title" v-for="(item,i) of lists" :key="i">
                 <li class="w-100" >
